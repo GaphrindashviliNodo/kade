@@ -1,0 +1,29 @@
+:root{--lees:#2a1320;--card:#3a1c2d;--parch:#f1e6d8;--brass:#c8a15a;--mute:#b9a596;--bad:#e0737f}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Noto Serif Georgian',Georgia,serif;background:var(--lees);color:var(--parch);line-height:1.5;padding:16px}
+h1{color:var(--brass);font-size:1.6rem}
+h2{font-size:1.1rem;margin:20px 0 10px}
+input,select,textarea,button{font:inherit}
+input,select,textarea{width:100%;padding:9px 11px;border-radius:6px;border:1px solid var(--mute);background:var(--card);color:var(--parch)}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+button{padding:9px 18px;border:0;border-radius:6px;background:var(--brass);color:var(--lees);font-weight:600;cursor:pointer}
+button.ghost{background:none;border:1px solid var(--mute);color:var(--parch)}
+#login{max-width:340px;margin:12vh auto;display:grid;gap:12px}
+#err,#msg{color:var(--bad);font-size:.9rem}
+#panel{max-width:1000px;margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+form{background:var(--card);padding:16px;border-radius:8px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px;align-items:end}
+label{display:grid;gap:4px;font-size:.85rem;color:var(--mute)}
+label[hidden]{display:none}
+label.chk{display:flex;align-items:center;gap:8px;color:var(--parch)}
+label.chk input{width:auto}
+#pv{max-height:90px;border-radius:6px}
+.it{display:grid;grid-template-columns:56px 1fr 110px auto;gap:12px;align-items:center;background:var(--card);padding:10px 12px;border-radius:8px;margin-bottom:8px}
+.it img,.it .no{width:56px;height:56px;object-fit:contain;background:#2f1626;border-radius:6px;display:grid;place-items:center}
+.it.off{opacity:.55}
+.it small{color:var(--mute);display:block}
+.it .p{padding:6px 8px}
+.acts{display:flex;gap:6px;flex-wrap:wrap}
+.acts button{padding:6px 10px;font-size:.8rem}
+@media(max-width:640px){.it{grid-template-columns:56px 1fr}.it .p,.acts{grid-column:1/-1}}
